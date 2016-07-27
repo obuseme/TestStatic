@@ -16,13 +16,17 @@
 
 @implementation TestStaticTests
 
-- (void)testExample {
+- (void)testManager {
     ViewController *vc = [[ViewController alloc] init];
+
     NSLog(@"manager %@", [Manager sharedManager]);
+
     Manager *tempManager = [[Manager alloc] init];
     [Manager setManager:tempManager];
+
     NSLog(@"manager %@", [Manager sharedManager]);
     [vc viewDidLoad];
+
     NSLog(@"manager %@", [Manager sharedManager]);
 }
 
